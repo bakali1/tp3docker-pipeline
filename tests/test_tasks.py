@@ -10,4 +10,7 @@ def test_multiple_tasks():
     add_task("cd")
     assert "ci" in get_tasks()
     assert "cd" in get_tasks()
-    
+def test_delete_task():
+    add_task("hi")
+    delete_task("hi")
+    assert "hi" not in get_tasks()
